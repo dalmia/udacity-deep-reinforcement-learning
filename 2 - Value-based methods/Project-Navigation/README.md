@@ -58,6 +58,14 @@ env = env = UnityEnvironment(file_name="Banana.app")
 
 Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
 
+### Enhancements
+
+Several enhancements to the original DQN algorithm have also been incorporated:
+
+- Double DQN [[Paper](https://arxiv.org/abs/1509.06461)] [[Code](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/dqn_agent.py#L94)]
+- Prioritized Experience Replay [[Paper]()] [[Code]()]
+- Dueling DQN [[Paper](https://arxiv.org/abs/1511.06581)] [[Code]()]
+
 ### Results
 
 Plot showing the score per episode over all the episodes. The environment was solved in 2274 episodes (currently).
