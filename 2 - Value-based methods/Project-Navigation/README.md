@@ -49,7 +49,7 @@ env = env = UnityEnvironment(file_name="Banana.app")
 
 - `dqn_agent.py`: code for the agent used in the environment
 - `model.py`: code containing the Q-Network used as the function approximator by the agent
-- `checkpoint.pth`: saved model weights
+- `dqn.pth`: saved model weights for the original DQN
 - `Navigation_exploration.ipynb`: explore the unity environment
 - `Navigation_solution.ipynb`: notebook containing the solution
 - `Navigation_Pixels.ipynb`: notebook containing the code for the pixel-action problem (see below)
