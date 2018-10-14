@@ -87,8 +87,15 @@ class Agent():
         states, actions, rewards, next_states, dones = experiences
 
         # Get max predicted Q values (for next states) from target model
-        Q_targets_next = self.qnetwork_target(next_states).detach().max(1)[0].unsqueeze(1)
-        # Compute Q targets for current states 
+        # to compute using the original DQN paper way, uncomment the line below
+        # Q_targets_next = self.qnetwork_target(next_states).detach().max(1)[0].unsqueeze(1)
+        
+        # to comment using Double DQN, uncomment the lines below
+        best_local_actions = self.qnetwork_local(states).max(1)[1].unsqueeze(1)
+        double_dqn_targets = self.qnetwork_target(next_states)
+        Q_targets_next = torch.gather(double_dqn_targets, 1, best_local_actions)
+        
+        # Compute Q targets for current states
         Q_targets = rewards + (gamma * Q_targets_next * (1 - dones))
 
         # Get expected Q values from local model
