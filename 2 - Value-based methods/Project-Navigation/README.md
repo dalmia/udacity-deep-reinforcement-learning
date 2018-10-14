@@ -71,9 +71,9 @@ Several enhancements to the original DQN algorithm have also been incorporated:
 
 Plot showing the score per episode over all the episodes. The environment was solved in **1704** episodes (currently).
 
-| DQN             |  Double DQN |
+| Double DQN | DQN |
 :-------------------------:|:-------------------------:
-![dqn-scores](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/results/dqn_scores.png) |  ![double-dqn-scores](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/results/ddqn_scores.png) 
+![dqn-scores](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/results/ddqn_scores.png) |  ![double-dqn-scores](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/results/dqn_scores.png) 
 
 
 ### Challenge: Learning from Pixels
