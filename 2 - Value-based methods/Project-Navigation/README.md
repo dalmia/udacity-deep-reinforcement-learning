@@ -49,7 +49,8 @@ env = env = UnityEnvironment(file_name="Banana.app")
 
 - `dqn_agent.py`: code for the agent used in the environment
 - `model.py`: code containing the Q-Network used as the function approximator by the agent
-- `dqn.pth`: saved model weights for the original DQN
+- `dqn.pth`: saved model weights for the original DQN model
+- `ddqn.pth`: saved model weights for the Double DQN model
 - `Navigation_exploration.ipynb`: explore the unity environment
 - `Navigation_solution.ipynb`: notebook containing the solution
 - `Navigation_Pixels.ipynb`: notebook containing the code for the pixel-action problem (see below)
@@ -68,9 +69,12 @@ Several enhancements to the original DQN algorithm have also been incorporated:
 
 ### Results
 
-Plot showing the score per episode over all the episodes. The environment was solved in 2274 episodes (currently).
+Plot showing the score per episode over all the episodes. The environment was solved in **1704** episodes (currently).
 
-![score plot](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/results/score_plot.png)
+| DQN             |  Double DQN |
+:-------------------------:|:-------------------------:
+![dqn-scores](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/results/dqn_scores.png) |  ![double-dqn-scores](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/results/ddqn_scores.png) 
+
 
 ### Challenge: Learning from Pixels
 
