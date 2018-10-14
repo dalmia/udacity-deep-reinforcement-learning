@@ -64,7 +64,7 @@ Follow the instructions in `Navigation.ipynb` to get started with training your 
 Several enhancements to the original DQN algorithm have also been incorporated:
 
 - Double DQN [[Paper](https://arxiv.org/abs/1509.06461)] [[Code](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/dqn_agent.py#L94)]
-- Prioritized Experience Replay [[Paper](https://arxiv.org/abs/1511.05952)] [[Code]()]
+- Prioritized Experience Replay [[Paper](https://arxiv.org/abs/1511.05952)] [[Code]()] (WIP)
 - Dueling DQN [[Paper](https://arxiv.org/abs/1511.06581)] [[Code](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/model.py)]
 
 ### Results
