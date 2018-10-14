@@ -81,3 +81,10 @@ Then, place the file in this folder, and unzip (or decompress) the file.  Next, 
 (_For AWS_) If you'd like to train the agent on AWS, you must follow the instructions to [set up X Server](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above.
 
 ### Dependencies
+
+Use the `requirements.txt` file (in the [main](https://github.com/dalmia/udacity-deep-reinforcement-learning) folder) to install the required dependencies via `pip`.
+
+```
+pip install -r requirements.txt
+
+```
