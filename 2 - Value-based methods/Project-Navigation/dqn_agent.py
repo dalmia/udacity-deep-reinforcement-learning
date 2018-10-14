@@ -20,7 +20,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 class Agent():
     """Interacts with and learns from the environment."""
 
-    def __init__(self, qnetwork, state_size, action_size, seed):
+    def __init__(self, qnetwork, state_size, action_size, update_type, seed):
         """Initialize an Agent object.
         
         Params
@@ -28,11 +28,13 @@ class Agent():
             qnetwork (torch.nn.Module): model to use as the function approximator
             state_size (int): dimension of each state
             action_size (int): dimension of each action
+            update_type (str): 'dqn' or 'double-dqn'
             seed (int): random seed
         """
         self.state_size = state_size
         self.action_size = action_size
         self.seed = random.seed(seed)
+        self.update_type = update_type
 
         # Q-Network
         self.qnetwork_local = qnetwork(state_size, action_size, seed).to(device)
@@ -86,14 +88,14 @@ class Agent():
         """
         states, actions, rewards, next_states, dones = experiences
 
-        # Get max predicted Q values (for next states) from target model
-        # to compute using the original DQN paper way, uncomment the line below
-        # Q_targets_next = self.qnetwork_target(next_states).detach().max(1)[0].unsqueeze(1)
+        # Get max predicted Q values (for next states) from target model        
+        if self.update_type == 'dqn':
+            Q_targets_next = self.qnetwork_target(next_states).detach().max(1)[0].unsqueeze(1)
         
-        # to comment using Double DQN, uncomment the lines below
-        best_local_actions = self.qnetwork_local(states).max(1)[1].unsqueeze(1)
-        double_dqn_targets = self.qnetwork_target(next_states)
-        Q_targets_next = torch.gather(double_dqn_targets, 1, best_local_actions)
+        elif self.update_type == 'double_dqn'
+            best_local_actions = self.qnetwork_local(states).max(1)[1].unsqueeze(1)
+            double_dqn_targets = self.qnetwork_target(next_states)
+            Q_targets_next = torch.gather(double_dqn_targets, 1, best_local_actions)
         
         # Compute Q targets for current states
         Q_targets = rewards + (gamma * Q_targets_next * (1 - dones))
