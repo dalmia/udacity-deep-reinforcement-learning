@@ -25,6 +25,7 @@ class Agent():
         
         Params
         ======
+            qnetwork (torch.nn.Module): model to use as the function approximator
             state_size (int): dimension of each state
             action_size (int): dimension of each action
             seed (int): random seed
