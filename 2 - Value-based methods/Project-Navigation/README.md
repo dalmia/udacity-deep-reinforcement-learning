@@ -58,6 +58,12 @@ env = env = UnityEnvironment(file_name="Banana.app")
 
 Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
 
+### Results
+
+Plot showing the score per episode over all the episodes. The environment was solved in 2274 episodes (currently).
+
+![score plot](https://github.com/dalmia/udacity-deep-reinforcement-learning/blob/master/2%20-%20Value-based%20methods/Project-Navigation/results/score_plot.png)
+
 ### Challenge: Learning from Pixels
 
 In the project, your agent learned from information such as its velocity, along with ray-based perception of objects around its forward direction.  A more challenging task would be to learn directly from pixels!
@@ -73,3 +79,5 @@ You need only select the environment that matches your operating system:
 Then, place the file in this folder, and unzip (or decompress) the file.  Next, open `Navigation_Pixels.ipynb` and follow the instructions to learn how to use the Python API to control the agent.
 
 (_For AWS_) If you'd like to train the agent on AWS, you must follow the instructions to [set up X Server](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above.
+
+### Dependencies
