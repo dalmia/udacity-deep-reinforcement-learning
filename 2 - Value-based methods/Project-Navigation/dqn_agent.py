@@ -92,7 +92,7 @@ class Agent():
         if self.update_type == 'dqn':
             Q_targets_next = self.qnetwork_target(next_states).detach().max(1)[0].unsqueeze(1)
         
-        elif self.update_type == 'double_dqn'
+        elif self.update_type == 'double_dqn':
             best_local_actions = self.qnetwork_local(states).max(1)[1].unsqueeze(1)
             double_dqn_targets = self.qnetwork_target(next_states)
             Q_targets_next = torch.gather(double_dqn_targets, 1, best_local_actions)
