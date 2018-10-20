@@ -43,7 +43,7 @@ Both of the above mentioned techniques were incorporated. The entire implementat
 
 - **Double DQN***: DQNs are known to overestimate the value function because of the `max` operator. The idea of Double DQN is to disentangle the calculation of the Q-targets into finding the best action and then calculating the Q-value for that action in the given state. The trick then is to use one network to choose the best action and the other to evaluate that action. The intuition here is that if one network chose an action as the best one by mistake, chances are that the other network wouldn't have a large Q-value for the sub-optimal action. The network used for choosing the action is the online network whose parameters we want to learn and the network to evaluate that action is the target network described earlier. More details can be found in the [paper](https://arxiv.org/abs/1509.06461).
 
-  ![dueling network](/Users/aman/Desktop/projects/udacity-deep-reinforcement-learning/2 - Value-based methods/Project-Navigation/images/dueling_network.png) 
+  ![dueling network](images/dueling_network.png) 
 
 - **Dueling Network**: Normally, DQNs have a single output stream with the number of output nodes equal to the number of actions. But this could lead to unnecessarily estimating the value of all the actions for states for states which are clearly bad and where, choosing any action won't matter that much. So, the idea behind dueling networks is to have two output streams, with a shared feature extractor layer. One stream outputs a single scalar value denoting the value function for that state, `V(s)` while the other stream outputs the advantage function for each action in that state `A(a, s)`. The advantage function accounts for the advantage achieved for choosing action `a` . They are combined together using a special aggregrate layer:
 
@@ -76,16 +76,16 @@ Both of the above mentioned techniques were incorporated. The entire implementat
 
   The trained agent can be seen in action below:
 
-  ![trained](/Users/aman/Desktop/projects/udacity-deep-reinforcement-learning/2 - Value-based methods/Project-Navigation/results/trained_agent.gif) 
+  ![trained](results/trained_agent.gif) 
 
 
 
   The best performance was achieved by **Double DQN** where the reward of +13 was achieved in **377** episodes. It was a bit confusing to see that Dueling Double DQN wasn't the best one but I attribute it to the fact that I didn't do a hyperparameter search for the same and instead used the same hyperparameter setting. The plots of the rewards for the different variants of DQN is shown below:
 
 
-| Double DQN                                                   | DQN                                                          | Dueling DQN                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![double-dqn](/Users/aman/Desktop/projects/udacity-deep-reinforcement-learning/2 - Value-based methods/Project-Navigation/results/ddqn_new_scores.png) | ![dqn](/Users/aman/Desktop/projects/udacity-deep-reinforcement-learning/2 - Value-based methods/Project-Navigation/results/dqn_new_scores.png) | ![dueling double dqn](/Users/aman/Desktop/projects/udacity-deep-reinforcement-learning/2 - Value-based methods/Project-Navigation/results/dddqn_new_scores.png) |
+| Double DQN                                 | DQN                                | Dueling DQN                                         |
+| ------------------------------------------ | ---------------------------------- | --------------------------------------------------- |
+| ![double-dqn](results/ddqn_new_scores.png) | ![dqn](results/dqn_new_scores.png) | ![dueling double dqn](results/dddqn_new_scores.png) |
 
 
 ## Ideas for improvement
