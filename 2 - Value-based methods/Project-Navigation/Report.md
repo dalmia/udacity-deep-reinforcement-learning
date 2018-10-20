@@ -70,13 +70,13 @@ Both of the above mentioned techniques were incorporated. The entire implementat
   | Epsilon decay                       | 0.995 |
 
 
-  #Results
+  ## Results
 
    
 
   The trained agent can be seen in action below:
 
-  ![trained](/Users/aman/Desktop/projects/udacity-deep-reinforcement-learning/2 - Value-based methods/Project-Navigation/results/trained_agent.gif) 
+  ![trained](results/trained_agent.gif) 
 
 
 
@@ -85,7 +85,7 @@ Both of the above mentioned techniques were incorporated. The entire implementat
 
 | Double DQN                                                   | DQN                                                          | Dueling DQN                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![double-dqn](/Users/aman/Desktop/projects/udacity-deep-reinforcement-learning/2 - Value-based methods/Project-Navigation/results/ddqn_new_scores.png) | ![dqn](/Users/aman/Desktop/projects/udacity-deep-reinforcement-learning/2 - Value-based methods/Project-Navigation/results/dqn_new_scores.png) | ![dueling double dqn](/Users/aman/Desktop/projects/udacity-deep-reinforcement-learning/2 - Value-based methods/Project-Navigation/results/dddqn_new_scores.png) |
+| ![double-dqn](results/ddqn_new_scores.png) | ![dqn](results/dqn_new_scores.png) | ![dueling double dqn](results/dddqn_new_scores.png) |
 
 
 ## Ideas for improvement
