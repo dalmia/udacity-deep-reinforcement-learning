@@ -70,12 +70,6 @@ class Critic(nn.Module):
         torch.nn.init.kaiming_normal_(self.fc2.weight.data, a=self.leak, mode='fan_in')
         torch.nn.init.uniform_(self.fc3.weight.data, -3e-3, 3e-3)
 
-#     def initialize_weights(self):
-#         """ Initilaize the weights using He et al (2015) weights """
-#         torch.nn.init.kaiming_uniform_(self.fc1.weight.data, a=self.leak, mode='fan_in')
-#         torch.nn.init.kaiming_uniform_(self.fc2.weight.data, a=self.leak, mode='fan_in')
-#         torch.nn.init.uniform_(self.fc3.weight.data, -3e-3, 3e-3)
-
     def forward(self, state, action):
         """ Build a critic (value) network that maps (state, action) pairs -> Q-values."""
         state = self.bn(state)
