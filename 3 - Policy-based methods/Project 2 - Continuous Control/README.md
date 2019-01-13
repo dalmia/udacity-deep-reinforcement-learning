@@ -12,7 +12,7 @@ For this project, you will work with the [Reacher](https://github.com/Unity-Tech
 
 | Random agent             |  Trained agent |
 :-------------------------:|:-------------------------:
-![Random Agent](results/random_agent.gif)  |  ![Trained Agent](results/random_agent.gif)
+![Random Agent](results/random_agent.gif)  |  ![Trained Agent](results/trained_agent.gif)
 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
