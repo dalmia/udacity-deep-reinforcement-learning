@@ -102,7 +102,7 @@ six==1.11.0
 sparkmagic==0.12.5
 tensorboard==1.7.0
 tensorflow==1.7.1
-tensorflow-gpu==1.1.0
+tensorflow-gpu==1.15.2
 termcolor==1.1.0
 terminado==0.8.1
 testpath==0.3.1
