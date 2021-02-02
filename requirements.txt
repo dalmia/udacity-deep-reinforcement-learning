@@ -8,7 +8,7 @@ attrs==18.1.0
 Automat==0.0.0
 autovizwidget==0.12.5
 backcall==0.1.0
-bleach==1.5.0
+bleach==3.3.0
 bokeh==0.13.0
 box2d-py==2.3.5
 certifi==2018.4.16
