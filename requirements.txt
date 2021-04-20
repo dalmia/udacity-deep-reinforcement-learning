@@ -74,7 +74,7 @@ prometheus-client==0.2.0
 prompt-toolkit==1.0.15
 protobuf==3.5.2
 ptyprocess==0.6.0
-py==1.6.0
+py==1.10.0
 pyasn1==0.4.3
 pyasn1-modules==0.2.1
 pycparser==2.18
