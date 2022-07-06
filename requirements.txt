@@ -27,7 +27,7 @@ grpcio==1.11.0
 -e git+https://github.com/openai/gym.git@70ca46a9685de333493722ee74d0cd51782b2b44#egg=gym
 h5py==2.8.0
 hdijupyterutils==0.12.5
-html5lib==0.9999999
+html5lib==0.999999999
 hyperlink==17.3.1
 idna==2.7
 incremental==17.5.0
